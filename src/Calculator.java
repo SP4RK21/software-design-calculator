@@ -10,5 +10,10 @@ public class Calculator {
         PrintVisitor printVisitor = new PrintVisitor();
         printVisitor.visit(tokens);
 
+        ParserVisitor parserVisitor = new ParserVisitor();
+        parserVisitor.visit(tokens);
+        tokens = parserVisitor.getTokensInRPN();
+        printVisitor.visit(tokens);
+
     }
 }

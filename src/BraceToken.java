@@ -6,6 +6,10 @@ public class BraceToken implements Token {
         braceType = type;
     }
 
+    public BraceType getBraceType() {
+        return braceType;
+    }
+
     @Override
     public String toString() {
         switch (braceType) {

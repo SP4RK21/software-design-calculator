@@ -21,6 +21,19 @@ public class OperationToken implements Token {
         }
     }
 
+    public int priority() {
+        switch (operationType) {
+            case PLUS:
+            case MINUS:
+                return 0;
+            case MUL:
+            case DIV:
+                return 1;
+            default:
+                return -1;
+        }
+    }
+
     @Override
     public void accept(TokenVisitor visitor) {
         visitor.visit(this);
