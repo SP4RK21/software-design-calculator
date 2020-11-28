@@ -1,8 +1,12 @@
+package tokens;
+
+import visitors.TokenVisitor;
+
 public class BraceToken implements Token {
 
     private BraceType braceType;
 
-    public BraceToken(BraceType type) {
+    BraceToken(BraceType type) {
         braceType = type;
     }
 

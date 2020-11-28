@@ -1,7 +1,11 @@
+package tokens;
+
+import visitors.TokenVisitor;
+
 public class OperationToken implements Token {
     private OperationType operationType;
 
-    public OperationToken(OperationType type) {
+    OperationToken(OperationType type) {
         operationType = type;
     }
 

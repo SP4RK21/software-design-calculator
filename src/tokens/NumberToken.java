@@ -1,7 +1,11 @@
+package tokens;
+
+import visitors.TokenVisitor;
+
 public class NumberToken implements Token {
     private int value;
 
-    public NumberToken(int value) {
+    NumberToken(int value) {
         this.value = value;
     }
 

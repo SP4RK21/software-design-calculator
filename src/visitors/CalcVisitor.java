@@ -1,4 +1,10 @@
-import java.util.ArrayList;
+package visitors;
+
+import tokens.BraceToken;
+import tokens.NumberToken;
+import tokens.OperationToken;
+import tokens.Token;
+
 import java.util.List;
 import java.util.Stack;
 
