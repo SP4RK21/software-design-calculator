@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Stack;
 
 public class CalcVisitor implements TokenVisitor {
-
     private Integer result = null;
     private Stack<Integer> tokenStack = new Stack<>();
 

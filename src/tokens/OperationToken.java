@@ -9,22 +9,6 @@ public class OperationToken implements Token {
         operationType = type;
     }
 
-    @Override
-    public String toString() {
-        switch (operationType) {
-            case PLUS:
-                return "PLUS";
-            case MINUS:
-                return "MINUS";
-            case MUL:
-                return "MUL";
-            case DIV:
-                return "DIV";
-            default:
-                return "UNKNOWN_OPERATION";
-        }
-    }
-
     public OperationType getOperationType() {
         return operationType;
     }
@@ -39,6 +23,22 @@ public class OperationToken implements Token {
                 return 1;
             default:
                 return -1;
+        }
+    }
+
+    @Override
+    public String toString() {
+        switch (operationType) {
+            case PLUS:
+                return "PLUS";
+            case MINUS:
+                return "MINUS";
+            case MUL:
+                return "MUL";
+            case DIV:
+                return "DIV";
+            default:
+                return "UNKNOWN_OPERATION";
         }
     }
 

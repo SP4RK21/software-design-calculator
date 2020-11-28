@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tokenizer {
-
-    private static List<Token> tokens = new ArrayList<>();
-    private static TokenizerState currentState = new DefaultState();
+    private static List<Token> tokens;
+    private static TokenizerState currentState;
 
     public static List<Token> tokenize(String string) {
         tokens = new ArrayList<>();
@@ -20,13 +19,11 @@ public class Tokenizer {
     }
 
     abstract static class TokenizerState {
-
         abstract void process(char c);
         abstract void processEOF();
     }
 
     static class NumberState extends TokenizerState {
-
         int value = 0;
 
         @Override
