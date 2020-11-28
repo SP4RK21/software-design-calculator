@@ -21,6 +21,10 @@ public class OperationToken implements Token {
         }
     }
 
+    public OperationType getOperationType() {
+        return operationType;
+    }
+
     public int priority() {
         switch (operationType) {
             case PLUS:

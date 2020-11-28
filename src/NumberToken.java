@@ -5,6 +5,10 @@ public class NumberToken implements Token {
         this.value = value;
     }
 
+    public int getValue() {
+        return value;
+    }
+
     @Override
     public String toString() {
         return String.format("NUMBER(%d)", value);

@@ -15,5 +15,8 @@ public class Calculator {
         tokens = parserVisitor.getTokensInRPN();
         printVisitor.visit(tokens);
 
+        CalcVisitor calcVisitor = new CalcVisitor();
+        calcVisitor.visit(tokens);
+        System.out.println(calcVisitor.getResult());
     }
 }
