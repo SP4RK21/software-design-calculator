@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Calculator {
@@ -5,6 +6,9 @@ public class Calculator {
         System.out.println("Enter expression:");
         Scanner sc = new Scanner(System.in);
         String expression = sc.nextLine();
-        System.out.println(Tokenizer.tokenize(expression));
+        List<Token> tokens = Tokenizer.tokenize(expression);
+        PrintVisitor printVisitor = new PrintVisitor();
+        printVisitor.visit(tokens);
+
     }
 }
